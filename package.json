@@ -1,0 +1,20 @@
+{
+  "name": "tracker",
+  "version": "1.0.0",
+  "description": "task tracker app",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "tsc -w & nodemon dist/index.js"
+  },
+  "keywords": [
+    "task",
+    "node",
+    "tracker"
+  ],
+  "author": "Bharat Manral",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "typescript": "^5.6.3"
+  }
+}
