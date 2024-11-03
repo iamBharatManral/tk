@@ -4,7 +4,8 @@
   "description": "task tracker app",
   "main": "index.ts",
   "scripts": {
-    "dev": "tsc -w & nodemon dist/index.js"
+    "dev": "tsc -w & nodemon dist/index.js",
+    "build": "tsc"
   },
   "keywords": [
     "task",

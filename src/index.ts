@@ -1,11 +1,18 @@
+import Command from './command';
+
 console.log('Task Tracker!\n');
 
 function extractArgs(args: Array<string>) {
   return args.slice(2);
 }
 
+function isCommandValid(command: string) {
+  return Object.values(Command).includes(command as Command);
+}
+
 function processArgs(args: Array<string>) {
-  if (args.length == 0) {
+  const command = args[0];
+  if (args.length == 0 || !isCommandValid(command)) {
     usage();
     process.exit(0);
   }
