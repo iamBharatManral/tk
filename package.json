@@ -5,6 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "dev": "tsc -w & nodemon dist/index.js",
+    "test": "tsc tests/tests.ts --outDir dist & node dist/tests/tests.js",
     "build": "tsc"
   },
   "keywords": [
