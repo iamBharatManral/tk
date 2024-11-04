@@ -1,8 +1,9 @@
+#!/usr/bin/env node
+
 import Command from './command';
 import validateArgsFor from './validator';
 import execute from './handler';
-
-console.log('Task Tracker!\n');
+import JsonStorage from './JSONStorage';
 
 function extractArgs(args: Array<string>) {
   return args.slice(2);
@@ -20,7 +21,7 @@ function processArgs(args: Array<string>) {
   }
   args.splice(0, 1);
   if (validateArgsFor(command as Command, ...args)) {
-    execute(command as Command, ...args);
+    execute(command as Command, JsonStorage, ...args);
   }
 }
 

@@ -2,9 +2,8 @@
   "name": "tracker",
   "version": "1.0.0",
   "description": "task tracker app",
-  "main": "index.ts",
+  "main": "src/tk.ts",
   "scripts": {
-    "dev": "tsc -w & nodemon dist/index.js",
     "build": "tsc"
   },
   "keywords": [
