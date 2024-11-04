@@ -1,4 +1,6 @@
 import Command from './command';
+import validateArgsFor from './validator';
+import execute from './handler';
 
 console.log('Task Tracker!\n');
 
@@ -12,9 +14,13 @@ function isCommandValid(command: string) {
 
 function processArgs(args: Array<string>) {
   const command = args[0];
-  if (args.length == 0 || !isCommandValid(command)) {
+  if (!command || !isCommandValid(command)) {
     usage();
     process.exit(0);
+  }
+  args.splice(0, 1);
+  if (validateArgsFor(command as Command, ...args)) {
+    execute(command as Command, ...args);
   }
 }
 
